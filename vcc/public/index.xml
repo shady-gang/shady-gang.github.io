@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index on Vcc - the Vulkan Clang Compiler</title>
+    <link>/</link>
+    <description>Recent content in Index on Vcc - the Vulkan Clang Compiler</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How this works</title>
+      <link>/how/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/how/</guid>
+      <description>What is Shady # Vcc is little more than a front-end for Shady, a compiler and IR resulting of years of research and development at Saarland University. Shady was initially started to rationalise our GPU backends by supporting Vulkan in AnyDSL&#xA;You can think of Shady as implementing a futuristic dialect of SPIR-V that corresponds to our wishlist of features. Shady is free software and we&amp;rsquo;de love to have other front-ends use it !</description>
+    </item>
+    <item>
+      <title>Using Vcc</title>
+      <link>/use/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/use/</guid>
+      <description>Getting a copy of Vcc # There currently are no release builds available for Vcc, however it can be compiled as part of Shady which is freely available on GitHub. The following dependencies are required:&#xA;A C11 compliant compiler CMake 3.13 or later json-c SPIRV-Headers Vulkan-Headers are optional but are used to build some components of shady such as tests A copy of LLVM that includes the CMakeConfig.cmake files, so that Vcc can link against it Multiple LLVM versions are supported because we use LLVM-C, which has a more stable interface.</description>
+    </item>
+    <item>
+      <title>Why ?</title>
+      <link>/why/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/why/</guid>
+      <description>This is a lot of effort. Why are we chosing to research this topic ?&#xA;Dissatisfaction with &amp;ldquo;Legacy&amp;rdquo; Shading Languages # API Fragmentation # People familiar with the GPU world know there are two kinds of GPU APIs: compute and graphics. CUDA, ROCm and OpenCL are filed as the former, while Vulkan, DirectX and OpenGL would be the latter.&#xA;On the surface it would seem that graphics APIs and compute APIs overlap - both let you program the GPU, and in fact modern graphics APIs offer &amp;ldquo;compute shaders&amp;rdquo;</description>
+    </item>
+  </channel>
+</rss>

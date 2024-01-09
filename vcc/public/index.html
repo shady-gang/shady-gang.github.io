@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+	<meta name="generator" content="Hugo 0.121.2">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Intro # Vcc - the Vulkan Clang Compiler, is a proof-of-concept C and C&#43;&#43; compiler for Vulkan leveraging Clang as a front-end, and Shady our own research IR and compiler. Unlike other shading languages, Vcc aims to stick closely to standard C/C&#43;&#43; languages and merely adds a few new intrinsics to cover GPU features. Vcc is similar to CUDA or Metal in this regard, and aims to bring the advantages of standard host languages to Vulkan shaders1.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Index" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/" />
+
+<title>Index | Vcc - the Vulkan Clang Compiler</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" >
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.6b89e22f9fc1f62548f4ebf40154a155af36cdd2a64c0a6c112ae71a6dd5d5a2.js" ></script>
+<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Vcc - the Vulkan Clang Compiler" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Vcc - the Vulkan Clang Compiler</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/how/" class="">How this works</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/use/" class="">Using Vcc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/why/" class="">Why ?</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Index</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#key-features">Key Features</a></li>
+    <li><a href="#status-and-caveats">Status and Caveats</a></li>
+    <li><a href="#sample-code">Sample code</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="intro">
+  Intro
+  <a class="anchor" href="#intro">#</a>
+</h2>
+<p>Vcc - the Vulkan Clang Compiler, is a proof-of-concept C and C++ compiler for Vulkan leveraging Clang as a front-end, and <a href="/shady">Shady</a> our own research IR and compiler. Unlike other shading languages, Vcc aims to stick closely to standard C/C++ languages and merely adds a few new intrinsics to cover GPU features. Vcc is similar to CUDA or Metal in this regard, and aims to bring the advantages of standard host languages to Vulkan shaders<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p><img src="/vcc.png" alt="" /></p>
+<h2 id="key-features">
+  Key Features
+  <a class="anchor" href="#key-features">#</a>
+</h2>
+<p>Vcc supports advanced C/C++ features usually left out of shading languages such as HLSL or GLSL, in particular raising the bar when it comes to pointer support and control-flow:</p>
+<ul>
+<li>Unrestricted pointers
+<ul>
+<li>Arithmetic is legal, they can be bitcasted to and from integers</li>
+</ul>
+</li>
+<li>Generic pointers
+<ul>
+<li>Generic pointers do not have an address space in their type, rather they carry the address space as a tag in the upper bits.</li>
+</ul>
+</li>
+<li>True function calls
+<ul>
+<li>Including recursion, a stack is implemented to handle this in the general case</li>
+</ul>
+</li>
+<li>Function pointers
+<ul>
+<li>Lets you write code in a functional style on the GPU without limitations</li>
+</ul>
+</li>
+<li>Arbitrary <code>goto</code> statements - code does not need to be strictly structured !</li>
+</ul>
+<p>Many of these capabilities are present in compute APIs, but are not supported in most graphics APIs such as DirectX or Vulkan. We aim to address this gap by proving these features can and should implemented. <a href="why">More on why we think that&rsquo;s important</a></p>
+<h2 id="status-and-caveats">
+  Status and Caveats
+  <a class="anchor" href="#status-and-caveats">#</a>
+</h2>
+<p>Vcc is still a work-in-progress. While we do commit to making all the previously mentionned features work reliably, and generally attempt to bring the entirety of C and C++ to the GPU without subsetting, there are still limitations:</p>
+<ul>
+<li>Certain functions, such as <code>malloc</code>/<code>free</code> require communicating with the host kernel which we currently do not implement.</li>
+<li>Non header-only librairies, including parts of the C and C++ standard libraries, will not work on the GPU without additional work, because of the way Vcc works.
+<ul>
+<li>While addressable, this would massively increase the scope of the project.</li>
+<li>For now it&rsquo;s best to think of Vcc as only supporting a <code>-ffreestanding</code> dialect of C/C++</li>
+</ul>
+</li>
+<li>C++ exceptions and their corresponding LLVM instructions (<code>landingpad</code> etc) are not supported.</li>
+<li>Function and data pointers are not portable between host and device. Taking addresses and passing them accross in either direction is UB - since Vulkan lacks a unified addressing extension this is a limitation we cannot address at this time.</li>
+</ul>
+<h2 id="sample-code">
+  Sample code
+  <a class="anchor" href="#sample-code">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;shady.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">descriptor_set</span>(<span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">descriptor_binding</span>(<span style="color:#ae81ff">1</span>) uniform sampler2D texSampler;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">location</span>(<span style="color:#ae81ff">0</span>) input vec3 fragColor;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">location</span>(<span style="color:#ae81ff">1</span>) input vec2 fragTexCoord;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">location</span>(<span style="color:#ae81ff">0</span>) output vec4 outColor;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fragment_shader <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    outColor <span style="color:#f92672">=</span> <span style="color:#a6e22e">texture2D</span>(texSampler, fragTexCoord) <span style="color:#f92672">*</span> (vec4) { fragColor.x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2.5f</span>, fragColor.y <span style="color:#f92672">*</span> <span style="color:#ae81ff">2.5f</span>, fragColor.z <span style="color:#f92672">*</span> <span style="color:#ae81ff">2.5f</span>, <span style="color:#ae81ff">1.0f</span> };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>While Vulkan is the primary target, the architecture of Vcc and Shady is applicable to other target languages and APIs, such as OpenGL/GLSL, or Metal. The former of which actually has some experimental code already present!&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#key-features">Key Features</a></li>
+    <li><a href="#status-and-caveats">Status and Caveats</a></li>
+    <li><a href="#sample-code">Sample code</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Index on Vcc - the Vulkan Clang Compiler</title>
-    <link>/</link>
+    <link>https://shady-gang.github.io/vcc/</link>
     <description>Recent content in Index on Vcc - the Vulkan Clang Compiler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shady-gang.github.io/vcc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C/C&#43;&#43; Language Extensions</title>
+      <link>https://shady-gang.github.io/vcc/language-extensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://shady-gang.github.io/vcc/language-extensions/</guid>
+      <description>Using &amp;lt;shady.h&amp;gt; # The &amp;lt;shady.h&amp;gt; header includes definitions for intrinsics and macros that are unique to shaders and not exposed in the C/C++ standard librairies.&#xA;It is not necessary to include this file in every translation unit, only in the files where you want to use those features, and it is also required to annotate shader module entry points.&#xA;Vector types # Vcc makes uses of the existing OpenCL C support in Clang and exposes small vec-types as also found in GLSL.</description>
+    </item>
     <item>
       <title>How this works</title>
-      <link>/how/</link>
+      <link>https://shady-gang.github.io/vcc/how/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/how/</guid>
-      <description>What is Shady # Vcc is little more than a front-end for Shady, a compiler and IR resulting of years of research and development at Saarland University. Shady was initially started to rationalise our GPU backends by supporting Vulkan in AnyDSL&#xA;You can think of Shady as implementing a futuristic dialect of SPIR-V that corresponds to our wishlist of features. Shady is free software and we&amp;rsquo;de love to have other front-ends use it !</description>
+      <guid>https://shady-gang.github.io/vcc/how/</guid>
+      <description>What is Shady # Vcc is little more than a front-end for Shady, a compiler and IR resulting of years of research and development at Saarland University. Shady was initially started to rationalise our GPU backends by supporting Vulkan in AnyDSL&#xA;As a language, it&amp;rsquo;s close to SPIR-V and LLVM but we have our own twist on a few things, in particular control-flow. Shady&amp;rsquo;s representation gives it distinct advantages when emulating constructs not found in SPIR-V.</description>
     </item>
     <item>
       <title>Using Vcc</title>
-      <link>/use/</link>
+      <link>https://shady-gang.github.io/vcc/use/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/use/</guid>
+      <guid>https://shady-gang.github.io/vcc/use/</guid>
       <description>Getting a copy of Vcc # There currently are no release builds available for Vcc, however it can be compiled as part of Shady which is freely available on GitHub. The following dependencies are required:&#xA;A C11 compliant compiler CMake 3.13 or later json-c SPIRV-Headers Vulkan-Headers are optional but are used to build some components of shady such as tests A copy of LLVM that includes the CMakeConfig.cmake files, so that Vcc can link against it Multiple LLVM versions are supported because we use LLVM-C, which has a more stable interface.</description>
     </item>
     <item>
       <title>Why ?</title>
-      <link>/why/</link>
+      <link>https://shady-gang.github.io/vcc/why/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/why/</guid>
-      <description>This is a lot of effort. Why are we chosing to research this topic ?&#xA;Dissatisfaction with &amp;ldquo;Legacy&amp;rdquo; Shading Languages # API Fragmentation # People familiar with the GPU world know there are two kinds of GPU APIs: compute and graphics. CUDA, ROCm and OpenCL are filed as the former, while Vulkan, DirectX and OpenGL would be the latter.&#xA;On the surface it would seem that graphics APIs and compute APIs overlap - both let you program the GPU, and in fact modern graphics APIs offer &amp;ldquo;compute shaders&amp;rdquo;</description>
+      <guid>https://shady-gang.github.io/vcc/why/</guid>
+      <description>This is a lot of effort. Why ?&#xA;Dissatisfaction with &amp;ldquo;Legacy&amp;rdquo; Shading Languages # Back in the early 2000s a significant revolution happened in the world of realtime computer graphics: we moved from &amp;ldquo;dumb&amp;rdquo; graphics accelerator that had only a fixed set of functionality (texturing slots, blended vertex colors, hardware T&amp;amp;L &amp;hellip; ) to increasingly programmable hardware. This hardware transition was accompanied by an API transition, de-emphasising the classic OpenGL state machine in favour of then-new high-level shading languages: GLSL and HLSL.</description>
     </item>
   </channel>
 </rss>

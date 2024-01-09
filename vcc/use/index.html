@@ -11,16 +11,16 @@ A C11 compliant compiler CMake 3.13 or later json-c SPIRV-Headers Vulkan-Headers
 <meta property="og:description" content="Getting a copy of Vcc # There currently are no release builds available for Vcc, however it can be compiled as part of Shady which is freely available on GitHub. The following dependencies are required:
 A C11 compliant compiler CMake 3.13 or later json-c SPIRV-Headers Vulkan-Headers are optional but are used to build some components of shady such as tests A copy of LLVM that includes the CMakeConfig.cmake files, so that Vcc can link against it Multiple LLVM versions are supported because we use LLVM-C, which has a more stable interface." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/use/" /><meta property="article:section" content="" />
+<meta property="og:url" content="https://shady-gang.github.io/vcc/use/" /><meta property="article:section" content="" />
 
 
 
 <title>Using Vcc | Vcc - the Vulkan Clang Compiler</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" >
-<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" >
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.6b89e22f9fc1f62548f4ebf40154a155af36cdd2a64c0a6c112ae71a6dd5d5a2.js" ></script>
+<link rel="manifest" href="/vcc/manifest.json">
+<link rel="icon" href="/vcc/favicon.png" >
+<link rel="stylesheet" href="/vcc/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/vcc/flexsearch.min.js"></script>
+  <script defer src="/vcc/en.search.min.10373ca9858c9adcbb09214984c98008fc984176feb5ec1374bfafd2e88b21ad.js" integrity="sha256-EDc8qYWMmty7CSFJhMmACPyYQXb&#43;tewTdL&#43;v0uiLIa0=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -36,7 +36,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/"><span>Vcc - the Vulkan Clang Compiler</span>
+  <a class="flex align-center" href="/vcc/"><span>Vcc - the Vulkan Clang Compiler</span>
   </a>
 </h2>
 
@@ -74,7 +74,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/how/" class="">How this works</a>
+    <a href="/vcc/language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
   
 
         </li>
@@ -87,7 +87,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/use/" class="active">Using Vcc</a>
+    <a href="/vcc/how/" class="">How this works</a>
   
 
         </li>
@@ -100,7 +100,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/why/" class="">Why ?</a>
+    <a href="/vcc/use/" class="active">Using Vcc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/vcc/why/" class="">Why ?</a>
   
 
         </li>
@@ -139,14 +152,14 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/vcc/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
   <strong>Using Vcc</strong>
 
   <label for="toc-control">
     
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/vcc/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -161,8 +174,9 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#getting-a-copy-of-vcc">Getting a copy of Vcc</a></li>
     <li><a href="#using-vcc">Using Vcc</a>
       <ul>
-        <li><a href="#using-shadyh">Using &lt;shady.h&gt;</a></li>
+        <li><a href="#language-extensions-and-shadyh">Language extensions and &lt;shady.h&gt;</a></li>
         <li><a href="#required-vulkan-version-and-capabilities">Required Vulkan version and capabilities</a></li>
+        <li><a href="#supported-drivers">Supported drivers</a></li>
       </ul>
     </li>
   </ul>
@@ -200,16 +214,22 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#using-vcc">#</a>
 </h2>
 <p>Vcc is used much like GCC or Clang is. In fact, most arguments are just forwarded to Clang! Using <code>vcc --help</code> one can a list of vcc specific arguments and flags. Vcc can produce SPIR-V binary files, and also has experimental support for GLSL and ISPC output. These SPIR-V files can then be ingested by your application as normal.</p>
-<h3 id="using-shadyh">
-  Using &lt;shady.h&gt;
-  <a class="anchor" href="#using-shadyh">#</a>
+<h3 id="language-extensions-and-shadyh">
+  Language extensions and &lt;shady.h&gt;
+  <a class="anchor" href="#language-extensions-and-shadyh">#</a>
 </h3>
-<p>The <code>&lt;shady.h&gt;</code> header includes definitions for intrinsics and macros that are unique to shaders and not exposed in the C/C++ standard librairies.</p>
+<p>See <a href="/language-extensions/">C/C++ Language Extensions</a>.</p>
 <h3 id="required-vulkan-version-and-capabilities">
   Required Vulkan version and capabilities
   <a class="anchor" href="#required-vulkan-version-and-capabilities">#</a>
 </h3>
-<p>Vcc currently requires Vulkan 1.1 and support for <code>VK_KHR_buffer_device_address</code>. It also currently requires support for `IWe are still working on organising the compiler flags and we will be writing up a more comprehensive support matrix later.</p>
+<p>Vcc currently requires Vulkan 1.1 and support for <code>VK_KHR_buffer_device_address</code>. It also currently requires support for <code>Int8</code>, <code>Int16</code> and <code>Int64</code>. These are basically ubiquitous.</p>
+<p>Some features are or will be made optional, with some corresponding degradations on the capabilities of the compiler. We are still working on organising the compiler flags and we will be writing up a more comprehensive support matrix later.</p>
+<h3 id="supported-drivers">
+  Supported drivers
+  <a class="anchor" href="#supported-drivers">#</a>
+</h3>
+<p>The following drivers and hardware have been tested with Shady:</p>
 </article>
  
       
@@ -254,8 +274,9 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#getting-a-copy-of-vcc">Getting a copy of Vcc</a></li>
     <li><a href="#using-vcc">Using Vcc</a>
       <ul>
-        <li><a href="#using-shadyh">Using &lt;shady.h&gt;</a></li>
+        <li><a href="#language-extensions-and-shadyh">Language extensions and &lt;shady.h&gt;</a></li>
         <li><a href="#required-vulkan-version-and-capabilities">Required Vulkan version and capabilities</a></li>
+        <li><a href="#supported-drivers">Supported drivers</a></li>
       </ul>
     </li>
   </ul>

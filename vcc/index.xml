@@ -33,7 +33,7 @@
       <link>https://shady-gang.github.io/vcc/why/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shady-gang.github.io/vcc/why/</guid>
-      <description>This is a lot of effort. Why ?&#xA;Dissatisfaction with &amp;ldquo;Legacy&amp;rdquo; Shading Languages # Back in the early 2000s a significant revolution happened in the world of realtime computer graphics: we moved from &amp;ldquo;dumb&amp;rdquo; graphics accelerator that had only a fixed set of functionality (texturing slots, blended vertex colors, hardware T&amp;amp;L &amp;hellip; ) to increasingly programmable hardware. This hardware transition was accompanied by an API transition, de-emphasising the classic OpenGL state machine in favour of then-new high-level shading languages: GLSL and HLSL.</description>
+      <description>This is a lot of effort. Why ?&#xA;Dissatisfaction with &amp;ldquo;Legacy&amp;rdquo; Shading Languages # Back in the early 2000s a significant revolution happened in the world of realtime computer graphics: we moved from &amp;ldquo;dumb&amp;rdquo; graphics accelerator that had only a fixed set of functionality (texturing slots, blended vertex colors, hardware T&amp;amp;L &amp;hellip; ) to increasingly programmable hardware. This hardware transition was accompanied by an API transition, de-emphasizing the classic OpenGL state machine in favour of then-new high-level shading languages: GLSL and HLSL.</description>
     </item>
   </channel>
 </rss>

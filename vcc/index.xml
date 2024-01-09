@@ -19,7 +19,7 @@
       <link>https://shady-gang.github.io/vcc/how/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shady-gang.github.io/vcc/how/</guid>
-      <description>What is Shady # Vcc is little more than a front-end for Shady, a compiler and IR resulting of years of research and development at Saarland University. Shady was initially started to rationalise our GPU backends by supporting Vulkan in AnyDSL&#xA;As a language, it&amp;rsquo;s close to SPIR-V and LLVM but we have our own twist on a few things, in particular control-flow. Shady&amp;rsquo;s representation gives it distinct advantages when emulating constructs not found in SPIR-V.</description>
+      <description>What is Shady # Vcc is little more than a front-end for Shady, a compiler and IR resulting from years of research and development at Saarland University. Shady was initially started to rationalize our GPU backends by supporting Vulkan in AnyDSL&#xA;As a language, it&amp;rsquo;s close to SPIR-V and LLVM but we have our own twist on a few things, in particular control-flow. Shady&amp;rsquo;s representation gives it distinct advantages when emulating constructs not found in SPIR-V.</description>
     </item>
     <item>
       <title>Using Vcc</title>

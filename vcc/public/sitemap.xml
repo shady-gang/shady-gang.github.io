@@ -2,16 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/categories/</loc>
+    <loc>https://shady-gang.github.io/vcc/language-extensions/</loc>
   </url><url>
-    <loc>/how/</loc>
+    <loc>https://shady-gang.github.io/vcc/categories/</loc>
   </url><url>
-    <loc>/</loc>
+    <loc>https://shady-gang.github.io/vcc/how/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://shady-gang.github.io/vcc/</loc>
   </url><url>
-    <loc>/use/</loc>
+    <loc>https://shady-gang.github.io/vcc/tags/</loc>
   </url><url>
-    <loc>/why/</loc>
+    <loc>https://shady-gang.github.io/vcc/use/</loc>
+  </url><url>
+    <loc>https://shady-gang.github.io/vcc/why/</loc>
   </url>
 </urlset>

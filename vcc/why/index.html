@@ -20,7 +20,7 @@ Dissatisfaction with &ldquo;Legacy&rdquo; Shading Languages # Back in the early 
 <link rel="icon" href="/vcc/favicon.png" >
 <link rel="stylesheet" href="/vcc/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/vcc/flexsearch.min.js"></script>
-  <script defer src="/vcc/en.search.min.2665a6a783d5551dc53ef1ffd238a437620f27758c69fddf84a90d43b83f759a.js" integrity="sha256-JmWmp4PVVR3FPvH/0jikN2IPJ3WMaf3fhKkNQ7g/dZo=" crossorigin="anonymous"></script>
+  <script defer src="/vcc/en.search.min.0132c3eaf02c642aaabdd3ee204da2d61c4acac496972b59cc425191b47e2d65.js" integrity="sha256-ATLD6vAsZCqqvdPuIE2i1hxKysSWlytZzEJRkbR&#43;LWU=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -203,7 +203,7 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#the-compute-and-graphics-schism">#</a>
 </h3>
 <p>Broadly speaking, there are two kinds of GPU APIs: compute and graphics. CUDA, ROCm and OpenCL are filed as the former, while Vulkan, DirectX and OpenGL would be the latter.  On the surface it would seem that graphics APIs and compute APIs overlap - both let you program the GPU, and in fact modern graphics APIs offer &ldquo;compute shaders&rdquo;.</p>
-<p>But these compute shaders are not the same as the compute kernels found in dedicated GPGPU apis, and severely lag behind in terms of features. Modern GPGPUs APIs work towards making GPU programming as close to general programming as possible - implementing complete C and C++ compilers for GPUs that follow normal syntax.</p>
+<p>But these compute shaders are not the same as the compute kernels found in dedicated GPGPU APIs, and severely lag behind in terms of features. Modern GPGPUs APIs work towards making GPU programming as close to general programming as possible - implementing complete C and C++ compilers for GPUs that follow normal syntax.</p>
 <h3 id="working-towards-single-source-gpu-programming">
   Working Towards Single-Source GPU programming
   <a class="anchor" href="#working-towards-single-source-gpu-programming">#</a>
@@ -227,7 +227,7 @@ https://github.com/alex-shpak/hugo-book
 <hr>
 <ol>
 <li id="fn:1">
-<p>Making Vcc a &ldquo;true&rdquo; single-source framework is out of scope and would involve basically working with Clang&rsquo;s existing offloading support. This is considered out-of-scope for now.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Making Vcc a &ldquo;true&rdquo; single-source framework would involve working with Clang&rsquo;s existing offloading support and is considered out of scope for now.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
 <p>We believe this is due to their long legacy, where these languages had no pointers in the syntax at all. We get to simply expose the newfound support for pointers in shaders using standard pointer syntax!&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>

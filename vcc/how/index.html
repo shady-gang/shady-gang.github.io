@@ -20,7 +20,7 @@ As a language, it&rsquo;s close to SPIR-V and LLVM but we have our own twist on 
 <link rel="icon" href="/vcc/favicon.png" >
 <link rel="stylesheet" href="/vcc/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/vcc/flexsearch.min.js"></script>
-  <script defer src="/vcc/en.search.min.2665a6a783d5551dc53ef1ffd238a437620f27758c69fddf84a90d43b83f759a.js" integrity="sha256-JmWmp4PVVR3FPvH/0jikN2IPJ3WMaf3fhKkNQ7g/dZo=" crossorigin="anonymous"></script>
+  <script defer src="/vcc/en.search.min.0132c3eaf02c642aaabdd3ee204da2d61c4acac496972b59cc425191b47e2d65.js" integrity="sha256-ATLD6vAsZCqqvdPuIE2i1hxKysSWlytZzEJRkbR&#43;LWU=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -193,13 +193,13 @@ https://github.com/alex-shpak/hugo-book
 <p>Vcc is little more than a front-end for <a href="https://github.com/Hugobros3/shady">Shady</a>, a compiler and IR resulting from years of research and development at Saarland University. Shady was initially started to rationalize our GPU backends by supporting Vulkan in <a href="https://anydsl.github.io/">AnyDSL</a></p>
 <p>As a language, it&rsquo;s close to SPIR-V and LLVM but we have our own twist on a few things, in particular control-flow. Shady&rsquo;s representation gives it distinct advantages when emulating constructs not found in SPIR-V. It is by necessity strongly aligned with SPIR-V and uses parts of the format verbatim in the IR, such as the builtins.</p>
 <p>You can think of Shady as implementing a futuristic dialect of SPIR-V that corresponds to our wishlist of features. We are currently working towards publishing papers on the internals of shady and we will be updating this website with more detail once we do.</p>
-<p>Shady is free software and we&rsquo;de love to have other front-ends use it ! This is an <a href="/why/">explicit goal</a> of the project.</p>
+<p>Shady is free software and we&rsquo;d love to have other front-ends use it ! This is an <a href="/why/">explicit goal</a> of the project.</p>
 <h2 id="relationship-to-clang-and-llvm">
   Relationship to Clang and LLVM
   <a class="anchor" href="#relationship-to-clang-and-llvm">#</a>
 </h2>
-<p>Vcc is a wrapper for the <code>clang</code> driver and directs it to emit the LLVM IR for your source files. LLVM is not involved in any optimizations on the code, instead Shady parses the LLVM IR and runs it&rsquo;s set of optimization and legalization passes to turn the IR into something that can run on Vulkan. Finally, Shady emits SPIR-V code that you application can then use.</p>
-<p>Vcc does <em>not</em> use a fork of LLVM nor Clang. It needs to link against LLVM to use it&rsquo;s bitcode parser and C API, but any recent version of LLVM should work. Shady supports both typed and untyped pointers so a large range of LLVM versions should work with it.</p>
+<p>Vcc is a wrapper for the <code>clang</code> driver and directs it to emit the LLVM IR for your source files. LLVM is not involved in any optimizations on the code, instead Shady parses the LLVM IR and runs its set of optimization and legalization passes to turn the IR into something that can run on Vulkan. Finally, Shady emits SPIR-V code that your application can then use.</p>
+<p>Vcc does <em>not</em> use a fork of LLVM nor Clang. It needs to link against LLVM to use its bitcode parser and C API, but any recent version of LLVM should work. Shady supports both typed and untyped pointers so a large range of LLVM versions should work with it.</p>
 <h2 id="exposing-spir-vvulkan-as-cc-language-extensions">
   Exposing SPIR-V/Vulkan as C/C++ language extensions
   <a class="anchor" href="#exposing-spir-vvulkan-as-cc-language-extensions">#</a>

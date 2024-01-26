@@ -16,11 +16,11 @@ As a language, it&rsquo;s close to SPIR-V and LLVM but we have our own twist on 
 
 
 <title>How this works | Vcc - the Vulkan Clang Compiler</title>
-<link rel="manifest" href="/vcc/manifest.json">
-<link rel="icon" href="/vcc/favicon.png" >
-<link rel="stylesheet" href="/vcc/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
-  <script defer src="/vcc/flexsearch.min.js"></script>
-  <script defer src="/vcc/en.search.min.0132c3eaf02c642aaabdd3ee204da2d61c4acac496972b59cc425191b47e2d65.js" integrity="sha256-ATLD6vAsZCqqvdPuIE2i1hxKysSWlytZzEJRkbR&#43;LWU=" crossorigin="anonymous"></script>
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../favicon.png" >
+<link rel="stylesheet" href="../book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="../flexsearch.min.js"></script>
+  <script defer src="../en.search.min.ccc40aa23b5748fd71d6b2383de00af576a4c3423c8fd44bd6b5b063094e2990.js" integrity="sha256-zMQKojtXSP1x1rI4PeAK9Xakw0I8j9RL1rWwYwlOKZA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -36,7 +36,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/vcc/"><span>Vcc - the Vulkan Clang Compiler</span>
+  <a class="flex align-center" href="../"><span>Vcc - the Vulkan Clang Compiler</span>
   </a>
 </h2>
 
@@ -74,7 +74,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/vcc/language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
+    <a href="../language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
   
 
         </li>
@@ -87,7 +87,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/vcc/how/" class="active">How this works</a>
+    <a href="../how/" class="active">How this works</a>
   
 
         </li>
@@ -100,7 +100,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/vcc/use/" class="">Using Vcc</a>
+    <a href="../use/" class="">Using Vcc</a>
   
 
         </li>
@@ -113,7 +113,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/vcc/why/" class="">Why ?</a>
+    <a href="../why/" class="">Why ?</a>
   
 
         </li>
@@ -152,14 +152,14 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/vcc/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
   <strong>How this works</strong>
 
   <label for="toc-control">
     
-    <img src="/vcc/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="../svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -190,10 +190,10 @@ https://github.com/alex-shpak/hugo-book
   What is Shady
   <a class="anchor" href="#what-is-shady">#</a>
 </h2>
-<p>Vcc is little more than a front-end for <a href="https://github.com/Hugobros3/shady">Shady</a>, a compiler and IR resulting from years of research and development at Saarland University. Shady was initially started to rationalize our GPU backends by supporting Vulkan in <a href="https://anydsl.github.io/">AnyDSL</a></p>
+<p>Vcc is little more than a front-end for <a href="https://github.com/shady-gang/shady">Shady</a>, a compiler and IR resulting from years of research and development at Saarland University. Shady was initially started to rationalize our GPU backends by supporting Vulkan in <a href="https://anydsl.github.io/">AnyDSL</a></p>
 <p>As a language, it&rsquo;s close to SPIR-V and LLVM but we have our own twist on a few things, in particular control-flow. Shady&rsquo;s representation gives it distinct advantages when emulating constructs not found in SPIR-V. It is by necessity strongly aligned with SPIR-V and uses parts of the format verbatim in the IR, such as the builtins.</p>
 <p>You can think of Shady as implementing a futuristic dialect of SPIR-V that corresponds to our wishlist of features. We are currently working towards publishing papers on the internals of shady and we will be updating this website with more detail once we do.</p>
-<p>Shady is free software and we&rsquo;d love to have other front-ends use it ! This is an <a href="/why/">explicit goal</a> of the project.</p>
+<p>Shady is free software and we&rsquo;d love to have other front-ends use it ! This is an <a href="../why/">explicit goal</a> of the project.</p>
 <h2 id="relationship-to-clang-and-llvm">
   Relationship to Clang and LLVM
   <a class="anchor" href="#relationship-to-clang-and-llvm">#</a>
@@ -204,7 +204,7 @@ https://github.com/alex-shpak/hugo-book
   Exposing SPIR-V/Vulkan as C/C++ language extensions
   <a class="anchor" href="#exposing-spir-vvulkan-as-cc-language-extensions">#</a>
 </h2>
-<p>Since we are not modifying Clang, we had to find a way to add our own intrinsics to expose features not present in standard C/C++, such as fixed-function texturing support. This is done through the general-purpose <code>__attribute__((annotate(&quot;&quot;)))</code> annotations, which are thankfully retained in the IR. Shady comes with a <code>&lt;shady.h&gt;</code> header that you can simply include in your application to use the extra features. You can look at the Vcc <a href="https://github.com/Hugobros3/shady/tree/master/test/vcc">tests</a> and <a href="https://github.com/Hugobros3/shady/tree/master/samples">samples</a> for guidance on how to use these.</p>
+<p>Since we are not modifying Clang, we had to find a way to add our own intrinsics to expose features not present in standard C/C++, such as fixed-function texturing support. This is done through the general-purpose <code>__attribute__((annotate(&quot;&quot;)))</code> annotations, which are thankfully retained in the IR. Shady comes with a <code>&lt;shady.h&gt;</code> header that you can simply include in your application to use the extra features. You can look at the Vcc <a href="https://github.com/shady-gang/shady/tree/master/test/vcc">tests</a> and <a href="https://github.com/shady-gang/shady/tree/master/samples">samples</a> for guidance on how to use these.</p>
 <p>Some features are currently not exposed, but that doesn&rsquo;t mean that Vcc/Shady cannot easily support them. As we are developing this we are constantly exposing new extensions, sometimes it is just a matter of adding appropriate intrinsics. Feel free to raise issues on GitHub if there is something you&rsquo;d like to see.</p>
 </article>
  

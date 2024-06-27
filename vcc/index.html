@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.121.2">
+	<meta name="generator" content="Hugo 0.128.0">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Intro # Vcc - the Vulkan Clang Compiler, is a proof-of-concept C and C&#43;&#43; compiler for Vulkan leveraging Clang as a front-end, and Shady our own research IR and compiler. Unlike other shading languages, Vcc aims to stick closely to standard C/C&#43;&#43; languages and merely adds a few new intrinsics to cover GPU features. Vcc is similar to CUDA or Metal in this regard, and aims to bring the advantages of standard host languages to Vulkan shaders1.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Index" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://shady-gang.github.io/vcc/" />
-
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://shady-gang.github.io/vcc/">
+  <meta property="og:site_name" content="Vcc - the Vulkan Clang Compiler">
+  <meta property="og:title" content="Index">
+  <meta property="og:description" content="Intro # Vcc - the Vulkan Clang Compiler, is a proof-of-concept C and C&#43;&#43; compiler for Vulkan leveraging Clang as a front-end, and Shady our own research IR and compiler. Unlike other shading languages, Vcc aims to stick closely to standard C/C&#43;&#43; languages and merely adds a few new intrinsics to cover GPU features. Vcc is similar to CUDA or Metal in this regard, and aims to bring the advantages of standard host languages to Vulkan shaders1.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
 <title>Index | Vcc - the Vulkan Clang Compiler</title>
-<link rel="manifest" href="./manifest.json">
+<link rel="manifest" href="./vcc/manifest.json">
 <link rel="icon" href="./favicon.png" >
-<link rel="stylesheet" href="./book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+<link rel="stylesheet" href="./vcc/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="./flexsearch.min.js"></script>
-  <script defer src="./en.search.min.6f7e0b51448609986f0d60d540496707fce1fd0cec73eae376c2f7778e70a577.js" integrity="sha256-b34LUUSGCZhvDWDVQElnB/zh/Qzsc&#43;rjdsL3d45wpXc=" crossorigin="anonymous"></script>
+  <script defer src="./vcc/en.search.min.7a4474514ef172f3384345261d06b31e42330a537e4fa146064137102fe0eb76.js" integrity="sha256-ekR0UU7xcvM4Q0UmHQazHkIzClN&#43;T6FGBkE3EC/g63Y=" crossorigin="anonymous"></script>
+
+  
+
 <link rel="alternate" type="application/rss+xml" href="https://shady-gang.github.io/vcc/index.xml" title="Vcc - the Vulkan Clang Compiler" />
 <!--
 Made with Book Theme
@@ -242,7 +246,7 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;shady.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">descriptor_set</span>(<span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">descriptor_binding</span>(<span style="color:#ae81ff">1</span>) uniform sampler2D texSampler;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">descriptor_set</span>(<span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">descriptor_binding</span>(<span style="color:#ae81ff">1</span>) uniform_constant sampler2D texSampler;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">location</span>(<span style="color:#ae81ff">0</span>) input vec3 fragColor;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">location</span>(<span style="color:#ae81ff">1</span>) input vec2 fragTexCoord;

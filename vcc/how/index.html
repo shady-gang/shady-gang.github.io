@@ -15,11 +15,12 @@ As a language, it’s close to SPIR-V and LLVM but we have our own twist on a fe
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
 <title>How this works | Vcc - the Vulkan Clang Compiler</title>
-<link rel="manifest" href="../vcc/manifest.json">
-<link rel="icon" href="../favicon.png" >
-<link rel="stylesheet" href="../vcc/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
-  <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../vcc/en.search.min.7a4474514ef172f3384345261d06b31e42330a537e4fa146064137102fe0eb76.js" integrity="sha256-ekR0UU7xcvM4Q0UmHQazHkIzClN&#43;T6FGBkE3EC/g63Y=" crossorigin="anonymous"></script>
+<link rel="manifest" href="/vcc/manifest.json">
+<link rel="icon" href="/vcc/favicon.png" >
+<link rel="canonical" href="https://shady-gang.github.io/vcc/how/">
+<link rel="stylesheet" href="/vcc/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/vcc/fuse.min.js"></script>
+  <script defer src="/vcc/en.search.min.f5f8e8ce3cf602030d7eb4fed09ebaf7164cf32dea53c8fc04524b6f47d01c7b.js" integrity="sha256-9fjozjz2AgMNfrT&#43;0J669xZM8y3qU8j8BFJLb0fQHHs=" crossorigin="anonymous"></script>
 
   
 
@@ -38,16 +39,17 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="../"><span>Vcc - the Vulkan Clang Compiler</span>
+  <a class="flex align-center" href="/vcc/"><span>Vcc - the Vulkan Clang Compiler</span>
   </a>
 </h2>
 
 
-<div class="book-search">
+<div class="book-search hidden">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
 
@@ -76,7 +78,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
+    <a href="/vcc/language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
   
 
         </li>
@@ -89,7 +91,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../how/" class="active">How this works</a>
+    <a href="/vcc/how/" class="active">How this works</a>
   
 
         </li>
@@ -102,7 +104,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../use/" class="">Using Vcc</a>
+    <a href="/vcc/use/" class="">Using Vcc</a>
   
 
         </li>
@@ -115,7 +117,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../why/" class="">Why ?</a>
+    <a href="/vcc/why/" class="">Why ?</a>
   
 
         </li>
@@ -154,14 +156,14 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/vcc/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
   <strong>How this works</strong>
 
   <label for="toc-control">
     
-    <img src="../svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/vcc/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -195,7 +197,7 @@ https://github.com/alex-shpak/hugo-book
 <p>Vcc is little more than a front-end for <a href="https://github.com/shady-gang/shady">Shady</a>, a compiler and IR resulting from years of research and development at Saarland University. Shady was initially started to rationalize our GPU backends by supporting Vulkan in <a href="https://anydsl.github.io/">AnyDSL</a></p>
 <p>As a language, it&rsquo;s close to SPIR-V and LLVM but we have our own twist on a few things, in particular control-flow. Shady&rsquo;s representation gives it distinct advantages when emulating constructs not found in SPIR-V. It is by necessity strongly aligned with SPIR-V and uses parts of the format verbatim in the IR, such as the builtins.</p>
 <p>You can think of Shady as implementing a futuristic dialect of SPIR-V that corresponds to our wishlist of features. We are currently working towards publishing papers on the internals of shady and we will be updating this website with more detail once we do.</p>
-<p>Shady is free software and we&rsquo;d love to have other front-ends use it ! This is an <a href="../why/">explicit goal</a> of the project.</p>
+<p>Shady is free software and we&rsquo;d love to have other front-ends use it ! This is an <a href="/why/">explicit goal</a> of the project.</p>
 <h2 id="relationship-to-clang-and-llvm">
   Relationship to Clang and LLVM
   <a class="anchor" href="#relationship-to-clang-and-llvm">#</a>

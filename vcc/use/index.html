@@ -15,11 +15,12 @@ A C11 compliant compiler CMake 3.13 or later json-c SPIRV-Headers Vulkan-Headers
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
 <title>Using Vcc | Vcc - the Vulkan Clang Compiler</title>
-<link rel="manifest" href="../vcc/manifest.json">
-<link rel="icon" href="../favicon.png" >
-<link rel="stylesheet" href="../vcc/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
-  <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../vcc/en.search.min.7a4474514ef172f3384345261d06b31e42330a537e4fa146064137102fe0eb76.js" integrity="sha256-ekR0UU7xcvM4Q0UmHQazHkIzClN&#43;T6FGBkE3EC/g63Y=" crossorigin="anonymous"></script>
+<link rel="manifest" href="/vcc/manifest.json">
+<link rel="icon" href="/vcc/favicon.png" >
+<link rel="canonical" href="https://shady-gang.github.io/vcc/use/">
+<link rel="stylesheet" href="/vcc/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/vcc/fuse.min.js"></script>
+  <script defer src="/vcc/en.search.min.f5f8e8ce3cf602030d7eb4fed09ebaf7164cf32dea53c8fc04524b6f47d01c7b.js" integrity="sha256-9fjozjz2AgMNfrT&#43;0J669xZM8y3qU8j8BFJLb0fQHHs=" crossorigin="anonymous"></script>
 
   
 
@@ -38,16 +39,17 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="../"><span>Vcc - the Vulkan Clang Compiler</span>
+  <a class="flex align-center" href="/vcc/"><span>Vcc - the Vulkan Clang Compiler</span>
   </a>
 </h2>
 
 
-<div class="book-search">
+<div class="book-search hidden">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
 
@@ -76,7 +78,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
+    <a href="/vcc/language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
   
 
         </li>
@@ -89,7 +91,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../how/" class="">How this works</a>
+    <a href="/vcc/how/" class="">How this works</a>
   
 
         </li>
@@ -102,7 +104,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../use/" class="active">Using Vcc</a>
+    <a href="/vcc/use/" class="active">Using Vcc</a>
   
 
         </li>
@@ -115,7 +117,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../why/" class="">Why ?</a>
+    <a href="/vcc/why/" class="">Why ?</a>
   
 
         </li>
@@ -154,14 +156,14 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/vcc/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
   <strong>Using Vcc</strong>
 
   <label for="toc-control">
     
-    <img src="../svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/vcc/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -220,7 +222,7 @@ https://github.com/alex-shpak/hugo-book
   Language extensions and &lt;shady.h&gt;
   <a class="anchor" href="#language-extensions-and-shadyh">#</a>
 </h3>
-<p>See <a href="../language-extensions">C/C++ Language Extensions</a>.</p>
+<p>See <a href="/language-extensions">C/C++ Language Extensions</a>.</p>
 <h3 id="required-vulkan-version-and-capabilities">
   Required Vulkan version and capabilities
   <a class="anchor" href="#required-vulkan-version-and-capabilities">#</a>

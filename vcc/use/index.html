@@ -3,27 +3,40 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Getting a copy of Vcc # There currently are no release builds available for Vcc, however it can be compiled as part of Shady which is freely available on GitHub. The following dependencies are required:
-A C11 compliant compiler CMake 3.13 or later json-c SPIRV-Headers Vulkan-Headers are optional but are used to build some components of shady such as tests A copy of LLVM that includes the CMakeConfig.cmake files, so that Vcc can link against it Multiple LLVM versions are supported because we use LLVM-C, which has a more stable interface.">
+<meta name="description" content="
+  Getting a copy of Vcc
+  #
+
+There currently are no release builds available for Vcc, however it can be compiled as part of Shady which is freely available on GitHub. The following dependencies are required:
+
+A C11 compliant compiler
+CMake 3.13 or later
+json-c
+SPIRV-Headers
+Vulkan-Headers are optional but are used to build some components of shady such as tests
+A copy of LLVM that includes the CMakeConfig.cmake files, so that Vcc can link against it
+
+Multiple LLVM versions are supported because we use LLVM-C, which has a more stable interface. Versions 14 to 17 have been tested so far.
+
+
+
+Additionally, a copy of clang on your path is required at runtime for vcc to operate. This copy may be a different version than the LLVM you linked Vcc against, however might cause issues due to how the LLVM IR evolves over time.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://shady-gang.github.io/vcc/use/">
   <meta property="og:site_name" content="Vcc - the Vulkan Clang Compiler">
   <meta property="og:title" content="Using Vcc">
   <meta property="og:description" content="Getting a copy of Vcc # There currently are no release builds available for Vcc, however it can be compiled as part of Shady which is freely available on GitHub. The following dependencies are required:
-A C11 compliant compiler CMake 3.13 or later json-c SPIRV-Headers Vulkan-Headers are optional but are used to build some components of shady such as tests A copy of LLVM that includes the CMakeConfig.cmake files, so that Vcc can link against it Multiple LLVM versions are supported because we use LLVM-C, which has a more stable interface.">
+A C11 compliant compiler CMake 3.13 or later json-c SPIRV-Headers Vulkan-Headers are optional but are used to build some components of shady such as tests A copy of LLVM that includes the CMakeConfig.cmake files, so that Vcc can link against it Multiple LLVM versions are supported because we use LLVM-C, which has a more stable interface. Versions 14 to 17 have been tested so far. Additionally, a copy of clang on your path is required at runtime for vcc to operate. This copy may be a different version than the LLVM you linked Vcc against, however might cause issues due to how the LLVM IR evolves over time.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
 <title>Using Vcc | Vcc - the Vulkan Clang Compiler</title>
-<link rel="manifest" href="/vcc/manifest.json">
-<link rel="icon" href="/vcc/favicon.png" >
+<link rel="icon" href="https://shady-gang.github.io/vcc/favicon.png" >
+<link rel="manifest" href="https://shady-gang.github.io/vcc/manifest.json">
 <link rel="canonical" href="https://shady-gang.github.io/vcc/use/">
-<link rel="stylesheet" href="/vcc/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
-  <script defer src="/vcc/fuse.min.js"></script>
-  <script defer src="/vcc/en.search.min.f5f8e8ce3cf602030d7eb4fed09ebaf7164cf32dea53c8fc04524b6f47d01c7b.js" integrity="sha256-9fjozjz2AgMNfrT&#43;0J669xZM8y3qU8j8BFJLb0fQHHs=" crossorigin="anonymous"></script>
-
-  
-
+<link rel="stylesheet" href="https://shady-gang.github.io/vcc/book.min.26ab4dc3f6076ceda2f9c263aa4029ae3341dbcce339f901aa432b11da6e5894.css" integrity="sha256-JqtNw/YHbO2i&#43;cJjqkAprjNB28zjOfkBqkMrEdpuWJQ=" crossorigin="anonymous">
+  <script defer src="https://shady-gang.github.io/vcc/fuse.min.js"></script>
+  <script defer src="https://shady-gang.github.io/vcc/en.search.min.9890cd93d072eb0e88cee8eaf6e99f918a42d4e7deecc4c66c2fd3c4d6fc5730.js" integrity="sha256-mJDNk9By6w6Izujq9umfkYpC1Ofe7MTGbC/TxNb8VzA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -38,8 +51,8 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-menu-content">
         
   <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/vcc/"><span>Vcc - the Vulkan Clang Compiler</span>
+<h2 class="book-brand"><img src="https://shady-gang.github.io/vcc/vcc.png" alt="Logo" style="width: 100%; height: unset;" /><a class="flex align-center" href="https://shady-gang.github.io/vcc/">
+    <span>Vcc - the Vulkan Clang Compiler</span>
   </a>
 </h2>
 
@@ -62,7 +75,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  
 
   
 
@@ -78,7 +90,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/vcc/language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
+    <a href="https://shady-gang.github.io/vcc/language-extensions/" class="">C/C&#43;&#43; Language Extensions</a>
   
 
         </li>
@@ -91,7 +103,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/vcc/how/" class="">How this works</a>
+    <a href="https://shady-gang.github.io/vcc/how/" class="">How this works</a>
   
 
         </li>
@@ -104,7 +116,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/vcc/use/" class="active">Using Vcc</a>
+    <a href="https://shady-gang.github.io/vcc/publications/" class="">Publications</a>
   
 
         </li>
@@ -117,14 +129,26 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/vcc/why/" class="">Why ?</a>
+    <a href="https://shady-gang.github.io/vcc/use/" class="active">Using Vcc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://shady-gang.github.io/vcc/why/" class="">Why ?</a>
   
 
         </li>
       
     
   </ul>
-
 
 
 
@@ -156,14 +180,14 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/vcc/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="https://shady-gang.github.io/vcc/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Using Vcc</strong>
+  <h3>Using Vcc</h3>
 
   <label for="toc-control">
     
-    <img src="/vcc/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="https://shady-gang.github.io/vcc/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -222,7 +246,7 @@ https://github.com/alex-shpak/hugo-book
   Language extensions and &lt;shady.h&gt;
   <a class="anchor" href="#language-extensions-and-shadyh">#</a>
 </h3>
-<p>See <a href="/language-extensions">C/C++ Language Extensions</a>.</p>
+<p>See <a href="https://shady-gang.github.io/vcc/language-extensions">C/C++ Language Extensions</a>.</p>
 <h3 id="required-vulkan-version-and-capabilities">
   Required Vulkan version and capabilities
   <a class="anchor" href="#required-vulkan-version-and-capabilities">#</a>
@@ -235,70 +259,70 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p>The following drivers and hardware have been tested with Shady:</p>
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Result</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>radv</code> (AMD Mesa)</td>
-<td>OK</td>
-<td>Main development target</td>
-</tr>
-<tr>
-<td><code>amdvlk</code> (AMD open-source)</td>
-<td>OK</td>
-<td></td>
-</tr>
-<tr>
-<td>AMD proprietary (Windows)</td>
-<td>OK</td>
-<td></td>
-</tr>
-<tr>
-<td>NVidia proprietary (Windows)</td>
-<td>OK</td>
-<td>Has/had some small driver issues, with workarounds.</td>
-</tr>
-<tr>
-<td><code>nvk</code></td>
-<td>Mixed, needs more testing</td>
-<td>Subgroup support for Maxwell is still WIP.</td>
-</tr>
-<tr>
-<td><code>anv</code> (Intel Mesa)</td>
-<td>OK</td>
-<td></td>
-</tr>
-<tr>
-<td>Intel Arc proprietary (Windows)</td>
-<td>OK</td>
-<td>Older drivers lack Int64, make sure to update</td>
-</tr>
-<tr>
-<td>MoltenVK</td>
-<td>Mixed</td>
-<td>SPIRV-Cross does not like Shady&rsquo;s codegen. Patches WIP.</td>
-</tr>
-<tr>
-<td>Imagination proprietary (BXT series)</td>
-<td>Needs more testing</td>
-<td>Tested on VisionFive II, small examples work</td>
-</tr>
-<tr>
-<td><code>llvmpipe</code> (Mesa software rendering)</td>
-<td>KO</td>
-<td>Lacks extension support, has weird SIMT behavior</td>
-</tr>
-<tr>
-<td>SwiftShader (Google software rendering)</td>
-<td>KO</td>
-<td>Lacks extension support, needs more testing</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Result</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>radv</code> (AMD Mesa)</td>
+          <td>OK</td>
+          <td>Main development target</td>
+      </tr>
+      <tr>
+          <td><code>amdvlk</code> (AMD open-source)</td>
+          <td>OK</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>AMD proprietary (Windows)</td>
+          <td>OK</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>NVidia proprietary (Windows)</td>
+          <td>OK</td>
+          <td>Has/had some small driver issues, with workarounds.</td>
+      </tr>
+      <tr>
+          <td><code>nvk</code></td>
+          <td>Mixed, needs more testing</td>
+          <td>Subgroup support for Maxwell is still WIP.</td>
+      </tr>
+      <tr>
+          <td><code>anv</code> (Intel Mesa)</td>
+          <td>OK</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Intel Arc proprietary (Windows)</td>
+          <td>OK</td>
+          <td>Older drivers lack Int64, make sure to update</td>
+      </tr>
+      <tr>
+          <td>MoltenVK</td>
+          <td>Mixed</td>
+          <td>SPIRV-Cross does not like Shady&rsquo;s codegen. Patches WIP.</td>
+      </tr>
+      <tr>
+          <td>Imagination proprietary (BXT series)</td>
+          <td>Needs more testing</td>
+          <td>Tested on VisionFive II, small examples work</td>
+      </tr>
+      <tr>
+          <td><code>llvmpipe</code> (Mesa software rendering)</td>
+          <td>KO</td>
+          <td>Lacks extension support, has weird SIMT behavior</td>
+      </tr>
+      <tr>
+          <td>SwiftShader (Google software rendering)</td>
+          <td>KO</td>
+          <td>Lacks extension support, needs more testing</td>
+      </tr>
+  </tbody>
 </table>
 </article>
  
